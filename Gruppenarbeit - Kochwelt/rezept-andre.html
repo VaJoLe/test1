@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Hackbällchen Toscana</title>
+    <link rel="icon" href="./img/logo_small.png">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+
+</head>
+
+<body onload="includeHTML()">
+
+    <div id="header-div" w3-include-html="templates/header.html"></div>
+
+    <div class="main-container">
+
+        <h1>Hackbällchen Toscana</h1>
+
+        <img id="pasta-image" src="./img/tuscanmeatballs3.jpg" alt="tuscan meatballs">
+
+        <div class="data-fields">
+            <div class="data-field"><img src="./img/icons/clock-regular.svg" alt="Dauer">15 Min.</div>
+            <div class="data-field"><img src="./img/icons/brain-solid.svg" alt="Schwierigkeit">normal</div>
+            <div class="data-field"><img src="./img/icons/calendar-alt-regular.svg" alt="veröffentlicht am">17.04.2024
+            </div>
+        </div>
+
+        <div id="seperator"></div>
+
+        <div class="portions">
+            <span id="text">Zutaten für</span>
+            <input id="input-field" type="number" min="1" max="10" value="4">
+            <button class="button-calculate" onclick="calculateIngredients1()">Portionen</button>
+        </div>
+
+        <table>
+            <tr>
+                <td id="incredient1">500</td>
+                <td>g Hackfleisch</td>
+            </tr>
+            <tr>
+                <td id="incredient2">400</td>
+                <td>g Tomaten, stückige </td>
+            </tr>
+            <tr>
+                <td id="incredient3">100</td>
+                <td>g süße Sahne</td>
+            </tr>
+            <tr>
+                <td id="incredient4">70</td>
+                <td>g Tomatenmark</td>
+            </tr>
+            <tr>
+                <td>Salz und Pfeffer</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td id="incredient5">3</td>
+                <td>EL Kräuter, italienische (TK)</td>
+            </tr>
+            <tr>
+                <td id="incredient7">1</td>
+                <td>TL Oregano</td>
+            </tr>
+            <tr>
+                <td>evtl.</td>
+                <td>Kräuter (Oregano, Thymian, Basilikum etc.)</td>
+            </tr>
+            <tr>
+                <td>evtl.</td>
+                <td>Knoblauch</td>
+            </tr>
+        </table>
+
+        <h2 class="h2">Zubereitung</h2>
+
+        <div class="data-fields">
+            <div class="data-field"><img src="./img/icons/clock-regular.svg" alt="Zubereitungszeit">ca.
+                20 Minuten
+            </div>
+            <div class="data-field"><img src="./img/icons/clock-regular.svg" alt="">Gesamtzeit ca.
+                55
+                Minuten</div>
+        </div>
+
+        <p id="preparation-text">
+            Das Hackfleisch mit Salz und Pfeffer würzen. Evtl. noch Kräuter wie Oregano, Thymian und/oder Basilikum und
+            nach Geschmack Knoblauch dazugeben.
+            Ca. 12 - 15 kleine Bällchen aus der Masse formen und in eine Auflaufform legen..<br>
+            <br>
+            Für die Tomatensoße die stückigen Tomaten mit der Sahne, der Kräutermischung, Tomatenmark und Zucker
+            verrühren, dann mit Salz und Pfeffer abschmecken.
+            Alles über die Hackbällchen geben. Den Mozzarella in Scheiben schneiden und darüber verteilen.<br>
+            <br>
+            Im heißen Backofen bei 175 °C Umluft ca. 30 - 40 min. garen. Aufpassen, dass der Käse nicht zu dunkel
+            wird.<br>
+            <br>
+            Dazu passt Reis.<br>
+        </p>
+
+        <h3 class="h3">Rezept erstellt von</h3>
+        <div class="created-by"><img src="./img/profilbild-andre.jpg" alt="">Andreas</div>
+
+
+
+    </div>
+    <div id="footer-div" w3-include-html="templates/footer.html"></div>
+
+</body>
+
+</html>

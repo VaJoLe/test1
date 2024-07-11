@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notizen</title>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+<body onload="render()">
+    <div class="eingabefeld">
+        <input class="title " type="text" id="title" placeholder="Titel">
+        <textarea name="text" id="note" placeholder="Notiz"></textarea>
+        <button class="noteButton " onclick="addNote()">Notiz hinzufügen</button>
+    </div>
+    <div id="notepad">
+
+    </div> 
+<a href="trashcan.html"><button class="trashButton title">Papierkorb <img class="img" src="./img/trashcan.png" alt=""></button></a>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,442 @@
+body {
+    margin: 0;
+}
+
+header {
+    height: 60px;
+    background-color: rgb(255, 139, 27);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.logo,
+.translate {
+    display: flex;
+}
+
+.logo img {
+    width: 80px;
+}
+
+.adress {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.adress:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.headerLeft {
+    display: flex;
+    gap: 10px;
+}
+
+.translate img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 2px solid white;
+}
+
+.translate img:hover {
+    border: 2px solid black;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 125ms;
+    cursor: pointer;
+}
+
+.bar:hover {
+    background-color: black;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-6px, -6px);
+}
+
+
+/* header ende */
+
+
+main {
+    display: flex;
+}
+
+aside {
+    padding: 0 10px;
+    width: 30%;
+    height: 93vh;
+    position: sticky;
+    top: 60px;
+    right: 0;
+    box-shadow: -2px 0px 4px 0px rgba(0, 0, 0, 0.28);
+}
+
+.basket {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.basketItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 50px;
+    height: auto;
+    padding: 5px;
+    border: 1px solid rgb(219, 217, 215);
+    border-radius: 6px;
+}
+
+.basketButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid rgb(219, 217, 215);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.basketButton Img {
+    width: 16px;
+    filter: brightness(0) saturate(100%) invert(59%) sepia(99%) saturate(1361%) hue-rotate(339deg) brightness(100%) contrast(104%);
+}
+
+.amounts {
+    display: flex;
+    justify-content: space-around;
+}
+
+.basketName {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+.sum {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 17px;
+    min-height: 40px;
+    margin: 5px 0;
+}
+
+.spaceBetween {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    height: 40px;
+    width: 100%;
+    margin: 10px 0;
+    border: 0;
+    background-color: rgba(211, 211, 211, 0.465);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.button:hover {
+    background-color: white;
+    border: 1px solid rgba(211, 211, 211, 0.465);
+}
+
+
+/* aside ende */
+
+
+section {
+    flex: 1;
+}
+
+.titelbild {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.mainSection {
+    padding: 0 10px;
+}
+
+.profilImg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profilImg img {
+    width: 100px;
+    position: absolute;
+    top: 300px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.name {
+    margin: 0;
+    font-size: 30px;
+    cursor: default;
+}
+
+.rating img {
+    width: 15px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.rating a {
+    color: rgb(219, 217, 215);
+    text-decoration: none;
+}
+
+.rating a:hover {
+    color: rgba(0, 0, 0, 0.61);
+    text-decoration: underline;
+}
+
+.info,
+.like {
+    display: flex;
+}
+
+.info img {
+    width: 20px;
+}
+
+.like img {
+    width: 20px;
+}
+
+.title2 {
+    display: flex;
+    gap: 10px;
+}
+
+.shippingCosts {
+    height: 40px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 900;
+    background-color: rgba(211, 211, 211, 0.465);
+    margin-bottom: 5px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(255, 139, 27);
+    position: sticky;
+    top: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid rgb(219, 217, 215);
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.slider a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.slider a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.menuImg {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+.menuInfo {
+    font-size: 30px;
+    font-weight: 900;
+    padding: 10px 0 0 15px;
+}
+
+.menuBox {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid rgb(219, 217, 215);
+    border-radius: 8px;
+}
+
+.menuBox:hover {
+    background-color: rgba(211, 211, 211, 0.465);
+    cursor: default;
+}
+
+.menuBox h2,
+h3 {
+    margin: 0;
+}
+
+.headline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headline button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    background-color: white;
+    border: 1px solid rgb(219, 217, 215);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.headline img {
+    width: 16px;
+    filter: brightness(0) saturate(100%) invert(59%) sepia(99%) saturate(1361%) hue-rotate(339deg) brightness(100%) contrast(104%);
+}
+
+.mobileBasket {
+    width: 80%;
+    display: none;
+    position: sticky;
+    bottom: 10px;
+    left: 11%;
+}
+
+.mobileBasket button {
+    width: 100%;
+    height: 50px;
+    font-size: x-large;
+    color: white;
+    border: 0;
+    border-radius: 8px;
+    background-color: rgba(255, 137, 27, 0.938);
+    cursor: pointer;
+}
+
+.mobileBasket button:hover {
+    color: black;
+}
+
+.x {
+    width: 20px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.d-none {
+    display: none;
+}
+
+.fullScreen {
+    width: 100%;
+    display: block;
+    min-height: 86vh;
+    height: auto;
+}
+
+footer {
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255, 137, 27, 0.938);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+
+}
+
+footer a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+@media(max-width: 1200px) {
+    aside {
+        display: none;
+    }
+
+    .mainSection {
+        margin-bottom: 15px;
+    }
+
+    .mobileBasket {
+        display: flex;
+    }
+}
+
+@media(max-width: 450px) {
+    .profilImg {
+        display: none;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+}

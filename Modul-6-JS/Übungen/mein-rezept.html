@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spaghetti Cabonara</title>
+    <link rel="shortcut icon" href="./img/logo_small.png" type="image/x-icon">
+    <!-- schriftart -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        body{
+            margin: 0;
+            font-family: "Raleway", sans-serif;
+            font-weight: 400;
+            width: 100%;
+            max-width: 1440px; 
+        }
+        main {
+            margin: 100px 160px;
+            font-weight: 200;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 600;
+        }
+
+        h2,
+        h3 {
+            font-weight: 500;
+        }
+
+        .headImgRezept {
+            height: 240px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .symbols {
+            width: 13px;
+            height: 13px;
+        }
+
+        .info {
+            display: flex;
+            gap: 20px;
+        }
+
+        .info-symbols {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 8px;
+            background-color: rgb(239, 239, 239);
+            border-radius: 8px;
+            margin-bottom: 20px;
+
+        }
+
+        #stroke {
+            background-color: rgb(239, 239, 239);
+            width: 100%;
+            height: 1px;
+            margin-top: 30px;
+        }
+
+        .ingredients {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin: 10px 0;
+        }
+
+        .div-input {
+            display: flex;
+        }
+
+        input {
+            height: 45px;
+            width: 120px;
+            border-radius: 8px 0 0 8px;
+            border: 1px solid rgb(239, 239, 239);
+        }
+
+        .button {
+            background-color: rgb(0, 128, 24);
+            color: white;
+            text-decoration: none;
+            padding: 16px 24px;
+            width: 150px;
+            border-width: 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table td {
+            height: 56px;
+            padding-left: 24px;
+            border-radius: 8px;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: rgb(239, 239, 239);
+        }
+
+        .profil {
+            width: 80px;
+            border-radius: 100%;
+        }
+        .creator {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            font-size: x-large;
+        }
+        </style>
+    <script>
+        function calc() {
+            let amount = +document.getElementById('input').value ;
+            let Spaghetti = 125;
+            let Speck = 75;
+            let Eier = 1;
+            let Sahne = 100;
+            let Parmesan = 40;
+
+            if (amount < 11) {
+                document.getElementById('amount1').innerHTML = `<td>${amount * Spaghetti}g Spaghetti</td>`
+                document.getElementById('amount2').innerHTML = `<td>${amount * Speck}g Speck</td>`
+                document.getElementById('amount3').innerHTML = `<td>${amount * Eier} Eier</td>`
+                document.getElementById('amount4').innerHTML = `<td>${amount * Sahne}ml Sahne (Alternativ Milch)</td>`
+                document.getElementById('amount5').innerHTML = `<td>${amount * Parmesan}g Parmesan</td>`
+            } else {
+                alert('Zahl muss kleiner als 11 sein!')
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</head>
+
+<body onload="includeHTML()">
+    <div id="header-div" w3-include-html="templates/header.html"></div>
+
+    <main>
+        <section class="sect-top">
+            <h1>Spaghetti Carbonara</h1>
+
+            <img class="headImgRezept" src="./img/cabonara.jpg" alt="salat">
+
+            <div class="info">
+                <div class="info-symbols">
+                    <img class="symbols" src="./img/icons/clock-regular.svg" alt="clock">
+                    20 Min.
+                </div>
+                <div class="info-symbols">
+                    <img class="symbols" src="./img/icons/brain-solid.svg" alt="brain">
+                    simple
+                </div>
+                <div class="info-symbols">
+                    <img class="symbols" src="./img/icons/calendar-alt-regular.svg" alt="calender">
+                    19.04.2024
+                </div>
+            </div>
+        </section>
+        <div id="stroke"><!-- strich --></div>
+        <section class="sect-mid">
+            <div class="ingredients">
+                <div>Zutaten für</div>
+                <div class="div-input">
+                    <input id="input" value="4" type="number" min="1"> <button class="button"
+                        onclick="calc()">Portionen</button>
+                </div>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <td id="amount1">500g Spaghetti</td>
+                    </tr>
+                    <tr>
+                        <td id="amount2">300g Speck</td>
+                    </tr>
+                    <tr>
+                        <td id="amount3">4 Eier</td>
+                    </tr>
+                    <tr>
+                        <td id="amount4">400ml Sahne (Alternativ Milch)</td>
+                    </tr>
+                    <tr>
+                        <td id="amount5">160g Parmesan (gerieben)</td>
+                    </tr>
+                    <tr>
+                        <td id="amount6">Salz, Pfeffer und Muskat</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section class="sect-end">
+            <h2>Zubereitung</h2>
+            <div class="info">
+                <div class="info-symbols">
+                    <img class="symbols" src="./img/icons/clock-regular.svg" alt="clock">
+                    20 Minuten
+                </div>
+                <div class="info-symbols">
+                    <img class="symbols" src="./img/icons/clock-regular.svg" alt="brain">
+                    Gesamtzeit 20 Minuten
+                </div>
+            </div>
+            <p>1. Spaghetti nach Packungsanweisung al dente garen. <br><br>2. In der Zwischenzeit Speck in einer großen
+                Pfanne braten, beiseite stellen.
+                <br><br> 3. Eier, Sahne und Parmesan verquirlen. Mit Salz, Pfeffer und Muskat würzen.
+                <br><br> 4. Nudeln direkt aus dem Nudelwasser zum Speck in die Pfanne geben und Eimischung hinzufügen.
+                Alles vermischen, dann bei sehr kleiner Hitze unter Rühren vermischen, bis die Sauce anzieht. Noch
+                einmal abschmecken und genießen.
+            </p>
+            <h3>Rezept erstellt von</h3>
+            <div class="creator">
+                <img class="profil" src="./img/profile.png" alt="profilbild">
+                <div>Jonas</div>
+            </div>
+        </section>
+    </main>
+    <div w3-include-html="templates/footer.html"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spaghetti Cabonara</title>
+    <link rel="shortcut icon" href="./img/logo_small.png" type="image/x-icon">
+    <!-- schriftart -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="script.js"></script>
+</head>
+
+<body onload="includeHTML()">
+    <div id="header-div" w3-include-html="templates/header.html"></div>
+
+    <main class="main-container">
+        <section class="sect-top">
+            <h1>Spaghetti Carbonara</h1>
+
+            <img id="pasta-image" src="./img/cabonara.jpg" alt="salat">
+
+            <div class="data-fields">
+                <div class="data-field">
+                    <img src="./img/icons/clock-regular.svg" alt="clock">
+                    20 Min.
+                </div>
+                <div class="data-field">
+                    <img src="./img/icons/brain-solid.svg" alt="brain">
+                    simple
+                </div>
+                <div class="data-field">
+                    <img src="./img/icons/calendar-alt-regular.svg" alt="calender">
+                    19.04.2024
+                </div>
+            </div>
+        </section>
+        <div id="stroke"><!-- strich --></div>
+        <section class="sect-mid">
+            <div class="portions">
+                <div id="text">Zutaten für</div>
+                <input id="input-field" value="4" type="number" min="1"> <button class="button-calculate"
+                    onclick="calc()">Portionen</button>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <td id="amount1">500g Spaghetti</td>
+                    </tr>
+                    <tr>
+                        <td id="amount2">300g Speck</td>
+                    </tr>
+                    <tr>
+                        <td id="amount3">4 Eier</td>
+                    </tr>
+                    <tr>
+                        <td id="amount4">400ml Sahne (Alternativ Milch)</td>
+                    </tr>
+                    <tr>
+                        <td id="amount5">160g Parmesan (gerieben)</td>
+                    </tr>
+                    <tr>
+                        <td id="amount6">Salz, Pfeffer und Muskat</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section class="sect-end">
+            <h2 class="h2">Zubereitung</h2>
+            <div class="data-fields">
+                <div class="data-field">
+                    <img src="./img/icons/clock-regular.svg" alt="clock">
+                    20 Minuten
+                </div>
+                <div class="data-field">
+                    <img src="./img/icons/clock-regular.svg" alt="brain">
+                    Gesamtzeit 20 Minuten
+                </div>
+            </div>
+            <p id="preparation-text">1. Spaghetti nach Packungsanweisung al dente garen. <br><br>2. In der
+                Zwischenzeit Speck in einer großen
+                Pfanne braten, beiseite stellen.
+                <br><br> 3. Eier, Sahne und Parmesan verquirlen. Mit Salz, Pfeffer und Muskat würzen.
+                <br><br> 4. Nudeln direkt aus dem Nudelwasser zum Speck in die Pfanne geben und Eimischung hinzufügen.
+                Alles vermischen, dann bei sehr kleiner Hitze unter Rühren vermischen, bis die Sauce anzieht. Noch
+                einmal abschmecken und genießen.
+            </p>
+            <h3 class="h3">Rezept erstellt von</h3>
+            <div class="created-by">
+                <img src="./img/profilbild-jonas.jpg" alt="profilbild">
+                <div>Jonas</div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-div" w3-include-html="templates/footer.html"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+body {
+    margin: 0;
+    font-family: "PT Sans", sans-serif;
+    color: white;
+}
+
+.aot {
+    background-image: url('./img/header.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    position: absolute;
+    top: 24px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+header img {
+    width: 100px;
+}
+
+.navLink {
+    text-decoration: none;
+    color: white;
+    margin-left: 16px;
+}
+
+.navLink:hover {
+    text-decoration: underline;
+    color: #B48A4E;
+}
+
+.navImg {
+    height: 24px;
+    width: auto;
+    margin-left: 16px;
+}
+
+.navImg:hover {
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 4px #FFFFFF);
+}
+
+h1 {
+    font-family: "Viga", sans-serif;
+    font-size: 84px;
+    font-weight: 100;
+    margin: 0;
+    text-align: center;
+}
+
+.button {
+    background-color: #B48A4E;
+    color: white;
+    text-decoration: none;
+    padding: 16px 24px;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+#quicklinks {
+    background-color: black;
+    padding: 80px 80px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.quicklink {
+    display: flex;
+    flex-direction: column;
+    color: #B48A4E;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    gap: 8px;
+    /* width: 30%; */
+    flex: 1;
+}
+
+.quicklink img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
+#festival {
+    background-color: #272727;
+    display: flex;
+    align-items: center;
+}
+
+.festival-left {
+    height: 280px;
+}
+
+#festival-info {
+    padding: 40px;
+    height: 200px;
+    flex: 1;
+    text-align: center;
+}
+
+#festival-info h2 {
+    margin-block-start: 0;
+}
+
+#seperator {
+    background-color: white;
+    width: 1px;
+    height: 200px;
+    margin-right: 10px;
+}
+
+.buy-ticket {
+    width: 280px;
+    display: flex;
+    justify-content: center;
+}
+
+.slogan {
+    color: #B48A4E;
+    font-size: x-large;
+    font-weight: 700;
+    text-align: center;
+    padding: 80px 80px;
+}
+
+.slogan p {
+    margin: 0;
+}
+
+.video {
+    background-image: url(./img/bottom.png);
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+}
+
+footer {
+    background-color: black;
+    padding: 80px;
+    display: flex;
+    align-items: flex-end;
+}
+
+footer p {
+    font-size: x-large;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+}
+
+.social-img {
+    height: 50px;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 16px;
+}
+
+.half-witdh {
+    width: 50%;
+}
+
+input {
+    height: 43px;
+    flex: 1;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 16px;
+    text-align: center;
+}
+
+.email {
+    display: flex;
+}
+
+.button-footer {
+    width: 200px;
+    border-width: 0;
+}
+
+@media(max-width:950px) {
+    #festival {
+        flex-direction: column;
+    }
+
+    .festival-left {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    #seperator {
+        display: none;
+    }
+
+    .buy-ticket {
+        padding-bottom: 40px;
+    }
+    .buy-ticket .button{
+        width: 100%;
+        text-align: center;
+    }
+    p{
+        margin: 0;
+    }
+}
+
+@media(max-width: 700px) {
+    .height-mobil {
+        display: none;
+    }
+    
+    h1 {
+        font-size: 60px;
+    }
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .full-width-mobile{
+        width: 100%;
+    }
+    footer p{
+        margin-bottom: 32px;
+    }
+}
+
+@media (max-width:600px) {
+    #quicklinks {
+        flex-direction: column;
+        gap: 100px;
+    }
+}

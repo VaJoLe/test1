@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+    <title>Spaghetti Bolognese</title>
+    <link rel="icon" href="./img/logo_small.png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+
+</head>
+
+<body onload="includeHTML()">
+
+    <div id="header-div" w3-include-html="templates/header.html"></div>
+
+    <div class="main-container">
+
+        <h1>Spaghetti Bolognese</h1>
+
+        <img id="pasta-image" src="./img/bolognese.jpg" alt="Spaghetti Bolognese Bild">
+
+        <div class="data-fields">
+            <div class="data-field"><img src="./img/icons/clock-regular.svg" alt="Dauer">15 Min.</div>
+            <div class="data-field"><img src="./img/icons/brain-solid.svg" alt="Schwierigkeit">simpel</div>
+            <div class="data-field"><img src="./img/icons/calendar-alt-regular.svg"
+                    alt="veröffentlicht am">17.04.2024
+            </div>
+        </div>
+
+        <div id="seperator"></div>
+
+        <div class="portions">
+            <span id="text">Zutaten für</span>
+            <input id="input-field" type="number" min="1" max="10" value="4">
+            <button class="button-calculate" onclick="calculateIngredients()">Portionen</button>
+        </div>
+
+        <table>
+            <tr>
+                <td id="incredient1">1</td>
+                <td>Zwiebel(n)</td>
+            </tr>
+            <tr>
+                <td id="incredient2">1</td>
+                <td>Knoblauchzehe(n)</td>
+            </tr>
+            <tr>
+                <td id="incredient3">1</td>
+                <td>Möhre(n)</td>
+            </tr>
+            <tr>
+                <td id="incredient4">500</td>
+                <td>g Rinderhackfleisch</td>
+            </tr>
+            <tr>
+                <td>Salz und Pfeffer</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td id="incredient5">200</td>
+                <td>ml Gemüsebrühe (Instant)</td>
+            </tr>
+            <tr>
+                <td id="incredient6">70</td>
+                <td>g Tomatenmark</td>
+            </tr>
+            <tr>
+                <td id="incredient7">1</td>
+                <td>TL Oregano</td>
+            </tr>
+            <tr>
+                <td id="incredient8">400</td>
+                <td>g Tomaten, stückige, mit Kräutern</td>
+            </tr>
+            <tr>
+                <td id="incredient9">2</td>
+                <td>EL Tomatenketchup</td>
+            </tr>
+            <tr>
+                <td id="incredient10">500</td>
+                <td>g Spaghetti</td>
+            </tr>
+        </table>
+
+        <h2 class="h2">Zubereitung</h2>
+
+        <div class="data-fields">
+            <div class="data-field"><img src="./img/icons/clock-regular.svg"
+                    alt="Zubereitungszeit">ca.
+                20 Minuten
+            </div>
+            <div class="data-field"><img src="./img/icons/clock-regular.svg" alt="">Gesamtzeit ca.
+                1
+                Sunde 5
+                Minuten</div>
+        </div>
+
+        <p id="preparation-text">
+            Zwiebel, Knoblauch und Möhre schälen und in feine Würfel schneiden.<br>
+            Hackfleisch in die Pfanne geben, langsam erhitzen und im eigenen Fett unter Rühren anbraten. Salzen und
+            pfeffern.<br>
+            Zwiebeln, Knoblauch und Möhren dazugeben und kurz mitbraten. Mit der Brühe ablöschen.<br>
+            Dann Tomatenmark, Oregano, die stückigen Tomaten und Tomatenketchup unterrühren. Etwa 40 Minuten einkochen
+            lassen.<br>
+            Spaghetti in Salzwasser bissfest kochen. Durch ein Sieb abgießen, mit kaltem Wasser abschrecken und zusammen
+            mit der Sauce servieren.<br>
+            <br>Tipp: Die Sauce Bolognese schmeckt auch lecker zu Reis.
+        </p>
+
+        <h3 class="h3">Rezept erstellt von</h3>
+        <div class="created-by"><img src="./img/profilbild-jan.jpg" alt="">Jan</div>
+
+    </div>
+
+    <div id="footer-div" w3-include-html="templates/footer.html"></div>
+
+</body>
+
+</html>

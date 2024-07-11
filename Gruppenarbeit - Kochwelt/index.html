@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="./img/logo_small.png" />
+  <title>Kochwelt</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+
+
+
+<body onload="includeHTML()">
+
+  <div id="header-div" w3-include-html="templates/header.html"></div>
+
+  <div class="main-container">
+
+    <section class="section-daily-new-recipe">
+      <img class="image-daily-new-recipe" src="./img/bolognese.jpg" alt="Vegane Meatballs" />
+      <div class="daily-new-recipe-box">
+        <h2 class="h2-recipe">Spaghetti Bolognese</h2>
+        <p>
+          Spaghetti Bolognese ist ein klassisches italienisches Gericht, bestehend aus al dente gekochten
+          Spaghetti-Nudeln, die mit einer reichhaltigen Fleischsauce kombiniert werden. Die Sauce ist eine köstliche
+          Mischung aus gewürztem Hackfleisch, Zwiebeln, Knoblauch, Tomaten und Kräutern, die langsam gekocht wird, um
+          ein köstliches Aroma zu erzeugen. Serviert mit einer großzügigen Portion frisch geriebenem Parmesan oder
+          Pecorino-Käse, ist Spaghetti Bolognese ein beliebtes und einfach zuzubereitendes Gericht, das jedem schmeckt.
+        </p>
+        <a href="./rezept-jan.html"><button>Rezept öffnen</button></a>
+      </div>
+    </section>
+  </div>
+  <div class="grey-background">
+    <div class="main-container">
+      <section class="section-newRecipe">
+        <h2 class="h2-adjusted">Lust auf was Neues?</h2>
+        <div class="recipe-overview">
+          <a class="recipeLink" href="./rezept-jonas.html">
+            <img src="./img/cabonara.jpg" />
+            <p>Spaghetti Cabonara</p>
+          </a>
+          <a class="recipeLink" href="./rezept-jan.html">
+            <img src="./img/bolognese.jpg" />
+            <p>Spaghetti Bolognese</p>
+          </a>
+          <a class="recipeLink" href="./rezept-andre.html">
+            <img src="./img/tuscanmeatballs3.jpg" />
+            <p>Hackbällchen Toscana</p>
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="main-container">
+    <section class="section-Pro-Contra">
+      <h2 class="h2-adjusted">Pfanne vs. Wok - Was ist besser?</h2>
+      <div class="wokText">
+        <p>
+          Pfanne und Wok sind zwei vielseitige Kochutensilien mit jeweils
+          eigenen Eigenschaften. Die Pfanne eignet sich ideal zum Braten,
+          Anbraten und Schmoren von Speisen, während der Wok mit seiner
+          konischen Form perfekt für das schnelle Anbraten bei hohen
+          Temperaturen und das Zubereiten von asiatischen Gerichten geeignet
+          ist. Die Wahl zwischen Pfanne und Wok hängt von den persönlichen
+          Vorlieben des Kochs und dem gewünschten Gericht ab. Beide bieten
+          Vorzüge und haben ihren Platz in der Küche, je nach den individuellen
+          Bedürfnissen und Kochgewohnheiten.
+        </p>
+        <img class="wok" src="./img/wok.jpg" alt="Wok" />
+      </div>
+    </section>
+  </div>
+
+  <div id="footer-div" w3-include-html="templates/footer.html"></div>
+
+
+</body>
+
+</html>

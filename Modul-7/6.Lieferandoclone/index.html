@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liefer-Clone</title>
+    <link rel="shortcut icon" href="img/icon-7359529_640.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="db.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body onload="render()">
+
+    <header>
+        <a class="logo" href="#/">
+            <img src="img/pizza-6948995_640.png" alt="">
+        </a>
+        <a href="#/" class="adress">Musterstraße 12,<br> 08525 Plauen</a>
+        <nav class="headerLeft">
+            <a class="translate" href="#/"><img src="img/germany-31017_640 Kopie.png" alt="german flag">
+            </a>
+            <a href="#/" class="burgermenu" onclick="toggleMenu()">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <img class="titelbild" src="img/titelbild.jpg" alt="pizza">
+
+            <section class="mainSection">
+                <div class="profilImg">
+                    <img src="img/icon-7359529_640.png" alt="profilbild">
+                </div>
+                <div class="title">
+                    <div class="title1">
+                        <h1 class="name">Pizza-Profi</h1>
+                        <div class="rating">
+                            <img src="img/stern.png" alt="sterne">
+                            <a href="#/">4,7 (320 Bewertungen)</a>
+                        </div>
+                    </div>
+                    <div class="title2">
+                        <a href="#/" class="info">
+                            <img src="img/information1.png" alt="info">
+                        </a>
+                        <a href="#/" class="like">
+                            <img id="heartImg" onclick="getLikeHeart()" src="img/heart1.png" alt="herz">
+                        </a>
+                    </div>
+                </div>
+                <div class="shippingCosts">+++ Lieferkostenfrei ab 50€ +++ </div>
+                <div class="slider">
+                    <a href="#salat">Salat</a>
+                    <a href="#pizza">Pizza</a>
+                    <a href="#burger">Burger</a>
+                    <a href="#sandwich">Sandwiches</a>
+                </div>
+                <div id="menuSalat">
+                </div>
+
+                <div id="menuPizza">
+                </div>
+
+                <div id="menuBurger">
+                </div>
+
+                <div id="menuSandwich">
+                </div>
+
+                <div class="mobileBasket" id="mobileBasket">
+                </div>
+            </section>
+        </section>
+
+        <aside>
+            <h2 class="basket">Warenkorb</h2>
+            <img class="x d-none" id="x" src="img/x-black.png" alt="close" onclick="closeMobileBasket()">
+            <div class="order" id="order">
+            </div>
+            <div class="sum" id="sum">
+            </div>
+            <button class="button" onclick="ordert()">
+                Bestellung abschließen
+            </button>
+        </aside>
+    </main>
+
+    <footer>
+        <a href="#/">Datenschutz</a>
+        <a href="#/">Impressum</a>
+    </footer>
+
+</body>
+
+</html>

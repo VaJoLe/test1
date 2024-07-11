@@ -1,0 +1,220 @@
+<html>
+
+<head>
+	<title>Restaurant Valtin</title>
+	<meta charset='utf-8'>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Truculenta:opsz,wdth,wght@12..72,75..125,100..900&display=swap"
+		rel="stylesheet">
+	<style>
+		html {
+			scroll-behavior: smooth;
+		}
+
+		body {
+			margin: 0px;
+
+		}
+
+		.atf-image {
+			width: 100%;
+			height: 700px;
+			object-fit: cover;
+		}
+
+		.oswald {
+			font-family: "Truculenta", sans-serif;
+		}
+
+		#main-container {
+			background-color: rgba(0, 0, 0, 0.3);
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			color: white;
+			height: 700px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		.container {
+			padding-left: 100px;
+			padding-right: 100px;
+			margin-bottom: 65px;
+		}
+
+		.googlemaps {
+			height: 250px;
+			width: 100%;
+		}
+
+		.footer {
+			background-color: rgba(35, 38, 41);
+			color: white;
+			padding: 100px;
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 0;
+		}
+
+		.footer-link {
+			color: white;
+			text-decoration: none;
+			cursor: pointer;
+
+		}
+
+		.footer-link:hover {
+			text-decoration: underline;
+			color: orange;
+		}
+
+		h1 {
+			color: #e1c50e;
+			font-size: 40px;
+			filter: drop-shadow(2px 4px 6px black);
+		}
+
+		.menu {
+			position: absolute;
+			top: 32px;
+			right: 75px;
+		}
+
+		.menu a {
+			color: white;
+			text-decoration: none;
+			font-weight: 500;
+			font-size: small;
+			margin-left: 16px;
+			filter: drop-shadow(2px 4px 6px black);
+
+		}
+
+		.menu a:hover {
+			color: e1c50e;
+		}
+
+		.order-btn {
+			color: black !important;
+			background-color: e1c50e;
+			padding: 12px
+		}
+
+		.order-btn:hover {
+			background-color: #f4df57
+		}
+
+		a {
+			color: e1c50e;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+
+<body>
+	<img class='atf-image' src='./img/aot.jpg'>
+
+	<div id='main-container'>
+		<h1>Herzlich Willkommen</h1>
+		Hier findest du einen Überblick über unsere Speisen.
+	</div>
+
+	<div class='menu'>
+		<a href='#contact'>RESERVIEREN</a>
+		<a href='#' class='order-btn'>BESTELL ONLINE</a>
+		<a href='#contact'>KONTAKT</a>
+		<a href='#maps'>ANFAHRT</a>
+		<a href='#card'>KARTE</a>
+	</div>
+
+	<div class='container'>
+		<h2 class='oswald'>Unsere Öffnungszeiten</h2>
+		<table>
+			<tr>
+				<td>Mo - Fr:</td>
+				<td>12:00 - 23:00 Uhr</td>
+			</tr>
+			<tr>
+				<td>Sa:</td>
+				<td>12:00 - 24:00 Uhr</td>
+			</tr>
+			<tr>
+				<td>So:</td>
+				<td>12:00 - 24:00 Uhr</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class='container'>
+		<h2 class='oswald'>Anfahrt</h2>
+		Unsere Adresse lautet: abdcd Ulfe<br>
+
+		<iframe class='googlemaps' id='maps'
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40609.639934427905!2d12.067172527313247!3d50.49505012337232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a124267844c583%3A0x2692fe574d439d21!2sM%C3%B6belcenter%20biller%20GmbH%20-%20Einrichtung%20und%20K%C3%BCchen%20Plauen!5e0!3m2!1sde!2sde!4v1710242105311!5m2!1sde!2sde"
+			style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</div>
+
+	<div id='card' class='container'>
+		<h2 class='oswald'> Tageskarte </h2>
+		<table>
+			<tr>
+				<td>1</td>
+				<td>Bratkartoffeln mit Spiegelei und Käse überbacken</td>
+				<td>15€</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Würzfleisch mit Toast</td>
+				<td>5€</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Rumpsteak aus Argentinien</td>
+				<td>20€</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Eis</td>
+				<td>3€</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>Gummibärchenbox</td>
+				<td>5€</td>
+			</tr>
+		</table>
+		Jetzt die Tageskarte <a href='./downloads/tageskarte.pdf' target='_blank'>herunterladen</a>.
+	</div>
+
+	<div class='container'>
+
+		<h2 class='oswald' id='contact'>Kontakt</h2>
+		So kannst du uns kontaktieren: <br>
+		Telefonnummer: <a href='tel: 0126538397 '>0126538397</a> <br>
+		E-Mail: <a href='mailto:hdgf@zfgzehd.de'>hdgf@zfgzehd.de</a>
+	</div>
+	<br>
+	<br>
+
+	<div class='container footer'>
+		<div>
+			(c) Copyright 2024 DA GmbH <br>
+		</div>
+		<div>
+			<a href='impressum.html' class='footer-link'>Impressum</a> |
+			<a href='datenschutz.html' class='footer-link'>Datenschutz</a>
+		</div>
+	</div>
+
+</body>
+
+</html>

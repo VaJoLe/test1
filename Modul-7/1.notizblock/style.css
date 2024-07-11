@@ -1,0 +1,152 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Sawarabi Mincho';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/sawarabi-mincho-v17-latin-regular.woff2') format('woff2');
+}
+
+body {
+    background-image: url(./img/bgNote.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    font-family: 'Sawarabi Mincho';
+
+}
+
+.eingabefeld {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.eingabefeld input,
+.noteButton,
+#note {
+    border: unset;
+    width: 80%;
+    height: 50px;
+    text-align: center;
+    outline: none;
+    padding: 0;
+    font-family: 'Sawarabi Mincho';
+
+}
+
+#note {
+    height: 150px;
+    width: 80%;
+    font-size: 16px;
+    border-radius: 0;
+
+}
+
+#title {
+    border-radius: 8px 8px 0 0;
+    background-color: rgb(239, 239, 239);
+}
+
+.noteButton {
+    border-radius: 0 0 8px 8px;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+.title {
+    font-size: 20px;
+}
+
+.notebg {
+    background-image: url(./img/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 170px;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.newNote {
+    padding: 0 16px;
+    width: 120px;
+    height: 210px;
+    overflow: scroll;
+    text-align: center;
+    font-size: 16px;
+}
+
+.img {
+    width: 20px;
+}
+
+.trash {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.return{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+#notepad {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+#notepadTrash{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.trashButton{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: unset;
+    border-radius: 8px;
+    height: 30px;
+}
+
+.startButton{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    border: unset;
+    border-radius: 8px;
+    height: 30px;
+} 
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+@media(max-width: 480px){
+    h1{
+        margin-top: 80px;
+
+    }
+}

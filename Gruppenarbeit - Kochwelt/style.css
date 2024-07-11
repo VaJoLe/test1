@@ -1,0 +1,805 @@
+@font-face {
+    font-family: "Raleway", sans-serif;
+    src: url('./img/fonts/Raleway-Regular.ttf') format('woff2'), /* Für moderne Browser */
+         url('./img/fonts/Raleway-Regular.ttf') format('woff'); /* Für ältere Browser */
+    /* Füge hier weitere Schriftstile hinzu, wenn nötig */
+  }
+
+body {
+    font-family: "Raleway", sans-serif;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* header */
+#header-div {
+    height: 75px;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+    /* width: 100%; */
+}
+
+.header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 70px;
+    margin: 0px auto;
+    max-width: 1440px;
+}
+
+.logo {
+    width: 200px;
+}
+
+.header-links {
+    display: flex;
+    gap: 12px;
+}
+
+.header a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: flex-end;
+    transition: 100ms;
+}
+
+.links:hover {
+    color: rgb(0, 128, 24);
+    text-decoration: underline solid rgb(0, 128, 24) 4px;
+    text-underline-offset: 5px;
+    transition: 100ms;
+}
+
+.burgermenu {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+/* header ende */
+
+/*Rezepte*/
+.main-container {
+    margin: 80px auto;
+    max-width: 1440px;
+    width:100%;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom :80px;
+    margin-top: 32px;
+}
+
+#pasta-image {
+    object-fit: cover;
+    width: 100%;
+    height: 240px;
+    border-radius: 8px;
+}
+
+#seperator {
+    height: 2px;
+    width: 100%;
+    background-color: rgb(239, 239, 239);
+}
+
+.data-fields img {
+    height: 15px;
+    width: 15px;
+}
+
+.data-fields {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 48px 0;
+    gap: 24px;
+}
+
+.data-field {
+    background-color: rgb(239, 239, 239);
+    border-radius: 8px;
+    padding: 2px 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.portions {
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+}
+
+#input-field {
+    display: flex;
+    height: 51px;
+    width: 160px;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid rgb(239, 239, 239);
+    margin-left: 12px;
+    text-align: center;
+    outline: none;
+    font-size: 16px;
+}
+
+.button-calculate {
+    background-color: rgb(0, 128, 24);
+    color: white;
+    text-decoration: none;
+    padding: 16px 24px;
+    width: 150px;
+    border-width: 0;
+    border-radius: 0 8px 8px 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    transition: 100ms;
+}
+
+.button-calculate:hover {
+    cursor: pointer;
+    background-color: rgba(33, 141, 53, 0.993);
+    transition: 100ms;
+}
+
+table {
+    width: 100%;
+    padding-bottom: 64px;
+}
+
+tbody {
+    display: grid;
+}
+
+td {
+    padding: 3px;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(239, 239, 239);
+}
+
+tr {
+    height: 40px;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.h2 {
+    margin: 0;
+}
+
+.h3 {
+    padding-top: 32px;
+    margin: 16px 0px;
+}
+
+.created-by {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.created-by img {
+    width: 80px;
+    border-radius: 100%;
+}
+
+#preparation-text {
+    margin: 0;
+}
+
+/*Rezepte Ende*/
+
+/*Index*/
+/* body {
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+} */
+
+.section-daily-new-recipe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0px;
+}
+
+.image-daily-new-recipe {
+    object-fit: cover;
+    border-radius: 8px;
+    width: 450px;
+    height: 316px;
+    aspect-ratio: 2 / 1;
+    image-rendering: pixelated;
+}
+
+.daily-new-recipe-box {
+    padding: 40px;
+    gap: 24px;
+}
+
+.daily-new-recipe-box p {
+    margin-bottom: 40px;
+}
+
+button {
+    background-color: rgb(0, 128, 24);
+    color: white;
+    border: none;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 16px 48px;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: 100ms;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgba(33, 141, 53, 0.993);
+    transition: 100ms;
+}
+
+.grey-background {
+    background-color: rgb(239, 239, 239);
+    width: 100%;
+    max-width: 100vw;
+
+}
+
+.section-newRecipe {
+    padding: 80px 0px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.h2-recipe {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    align-self: center;
+    padding-top: 0 !important;
+}
+
+.h2-adjusted {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-top: 0 !important;
+    padding-bottom: 40px;
+    align-self: center;
+}
+
+.recipe-overview {
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+.recipeLink {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.recipeLink img {
+    width: 250px;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    filter: drop-shadow(2px 4px 6px black);
+    border-radius: 8px;
+}
+
+.recipeLink img:hover {
+    transform: scale(1.1);
+    transition: 0.7s;
+}
+
+.section-Pro-Contra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0px;
+}
+
+.wokText {
+    display: flex;
+    gap: 24px;
+}
+
+.wok {
+    height: 200px;
+    width: 200px;
+    border-radius: 8px;
+}
+
+/*Index Ende*/
+
+/*Impressum/Datenschutz/Mail/Contact*/
+/* body {
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+} */
+
+.impressum-container {
+    margin: 54px auto;
+    flex: 1;
+    max-width: 1440px;
+    width: 100%;
+    /* text-align: start; */
+}
+
+.impressum-container h1 {
+    margin-bottom: 40px;
+}
+
+
+
+/*Impressum/Datenschutz/Mail/Contact Ende*/
+
+/*Contact*/
+#email-field {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid grey;
+    font-family: "Raleway", sans-serif;
+}
+
+#contact-field {
+    width: 700px;
+    height: 150px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid grey;
+    font-family: "Raleway", sans-serif;
+}
+
+#send-button {
+    background-color: rgb(0, 128, 24);
+    color: white;
+    text-decoration: none;
+    padding: 16px 24px;
+    width: 150px;
+    border-width: 0;
+    border-radius: 8px;
+    font-family: "Raleway", sans-serif;
+    transition: 100ms;
+}
+
+#send-button:hover {
+    cursor: pointer;
+    background-color: rgba(33, 141, 53, 0.993);
+    transition: 100ms;
+}
+
+/*Contact Ende*/
+
+
+/* footer */
+#footer-div {
+    width: 100%;
+    height: 90px;
+    background-color: rgba(64, 59, 59, 0.339);
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+    margin: 0px auto;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+#news {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-media {
+    height: 20px;
+}
+
+.social-media:hover {
+    filter: drop-shadow(0px 0px 4px rgb(0, 128, 24));
+    transition: 100ms;
+
+}
+
+#social {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+#social a {
+    display: flex;
+    align-items: center;
+}
+
+#footer-info {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 100ms;
+}
+
+#footer-info:hover {
+    color: rgb(0, 128, 24);
+    transition: 100ms;
+}
+
+#daim {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+#stroke {
+    height: 1px;
+    width: auto;
+    background-color: rgb(239, 239, 239);
+}
+
+/*footer ende*/
+
+/*Responsiv*/
+
+@media (max-width: 1550px) {
+    .main-container{
+    padding-right: 24px;
+    padding-left: 24px;
+    }
+
+    .header {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    footer {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+}
+
+@media (max-width: 1410px) {
+    .section-daily-new-recipe {
+        display: flex;
+        justify-content: center;
+        padding: 80px 0px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-daily-new-recipe {
+        width: 100%;
+    }
+
+    .daily-new-recipe-box {
+        display: flex;
+        padding: 40px;
+        gap: 24px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wokText {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    .recipe-overview {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .recipeLink img {
+        width: 450px;
+    }
+
+    .recipe-overview p {
+        font-size: 24px;
+
+    }
+}
+
+@media (max-width: 950px) {
+    .header {
+        align-items: center;
+        height: 90px;
+    }
+
+    .hide {
+        display: block;
+    }
+
+    .header-links {
+        display: none;
+    }
+
+    .burgermenu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .bar {
+        width: 30px;
+        height: 3px;
+        background-color: rgb(0, 128, 24);
+        margin: 6px 0;
+        transition: 125ms;
+    }
+
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+        transform: rotate(-45deg) translate(-6px, 6px);
+    }
+
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-5px, -6px);
+        transform: rotate(45deg) translate(-6px, -6px);
+    }
+
+    #menulinks {
+        flex-direction: column;
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        right: 166px;
+        top: 75px;
+        border-radius: 10px;
+        display: none
+    }
+
+    #menulinks a {
+        padding: 14px;
+        text-decoration: none;
+        color: black;
+    }
+
+    #menulinks a:hover {
+        text-decoration: none;
+        color: rgb(0, 128, 24);
+    }
+
+    .recipeLink img {
+        width: 300px;
+    }
+
+    .recipe-overview p {
+        font-size: 20px;
+    }
+
+    .impressum-container {
+        padding: 32px 32px 48px 32px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 880px) {
+    #menulinks {
+        right: 86px;
+    }
+
+    footer {
+        margin: 0 80px;
+    }
+
+    .section-daily-new-recipe {
+        padding-inline: 80px;
+
+    }
+
+    .section-newRecipe {
+        padding-inline: 80px;
+    }
+
+    .section-Pro-Contra {
+        padding-inline: 80px;
+    }
+}
+
+@media (max-width: 750px) {
+    .main-container {
+        margin: 0px;
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-bottom: 48px;
+        padding-top: 32px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .impressum-container h1 {
+        text-align: start;
+    }
+
+    .impressum-container {
+        padding: 32px 32px 48px 32px;
+        margin: 0;
+    }
+
+    #contact-field {
+        width: 98%;
+        min-width: 250px;
+    }
+
+    #footer-div {
+        height: auto;
+    }
+
+    footer {
+        flex-direction: column;
+        margin-bottom: 10px;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 550px) {
+    .header {
+        margin: 0;
+        justify-content: center;
+    }
+
+    #menulinks {
+        right: 46px;
+    }
+
+    #menulinks a {
+        padding: 8px;
+    }
+
+    footer {
+        margin: 0 0 10px;
+    }
+
+    .section-daily-new-recipe {
+        padding-inline: 40px;
+
+    }
+
+    .section-newRecipe {
+        padding-inline: 40px;
+    }
+
+    .section-Pro-Contra {
+        padding-inline: 40px;
+    }
+}
+
+@media (max-width: 470px) {
+    .section-daily-new-recipe {
+        padding-inline: 20px;
+
+    }
+
+    .section-newRecipe {
+        padding-inline: 20px;
+    }
+
+    .section-Pro-Contra {
+        padding-inline: 20px;
+    }
+
+    .recipeLink img {
+        width: 200px;
+    }
+
+}
+
+@media (max-width: 450px) {
+    .main-container {
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 24px;
+    }
+
+    h1 {
+        padding-bottom: 24px;
+    }
+
+    .data-fields img {
+        height: 24px;
+        width: 24px;
+    }
+
+    .data-fields {
+        padding: 40px 0;
+        text-align: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .portions {
+        justify-content: center;
+    }
+
+    #text {
+        display: none;
+    }
+
+    #input-field {
+        margin: 0;
+        font-weight: 700;
+        font-size: 16px;
+    }
+
+    .button-calculate {
+        padding: 15px 35px;
+        font-size: 16px;
+    }
+
+    tr {
+        font-size: 15px;
+    }
+
+    h2 {
+        padding-top: 24px;
+        text-align: center;
+    }
+
+    .preparation-text {
+        font-size: small;
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    .created-by {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 400px) {
+    #menulinks {
+        right: 26px;
+    }
+
+    .burgermenu {
+        padding-bottom: 2px;
+    }
+
+    #email-field {
+        width: 250px;
+    }
+}
+
+/*Responsiv Ende*/
